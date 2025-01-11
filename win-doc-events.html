@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window and Document Events</title>
+  <script src ="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+
+  <h1>Window and Document Events</h1>
+
+  <div style="height: 1000px;">
+    <p>Resize the browser or scroll the page to see events in action.</p>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+
+      // 1. Load event
+      $(window).on('load', function () {
+        console.log('Page fully loaded!');
+      });
+
+      // 2. Resize event
+      $(window).on('resize', function () {
+        console.log('Window resized!');
+      });
+
+      // 3. Scroll event
+      $(document).on('scroll', function () {
+        console.log('You are scrolling!');
+      });
+
+    });
+  </script>
+
+</body>
+</html>
